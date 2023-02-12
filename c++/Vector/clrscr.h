@@ -19,7 +19,8 @@ void cs()
   /* Overwrite the screen buffer with whitespace */
   FillConsoleOutputCharacter ( h, TEXT ( ' ' ), size, coord, &n );
   GetConsoleScreenBufferInfo ( h, &csbi );
-  FillConsoleOutputAttribute ( h, csbi.wAttributes, size, coord, &n );
+  FillConsoleOutputAttribute ( h, csbi.wAttri
+  butes, size, coord, &n );
 
   /* Reset the cursor to the top left position */
   SetConsoleCursorPosition ( h, coord );
